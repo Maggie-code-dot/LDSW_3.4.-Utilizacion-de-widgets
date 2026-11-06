@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'pokemon_screen.dart'; // <-- 1. Importas tu nueva pantalla de la tarea
 
 void main() {
   runApp(const MyApp());
@@ -161,6 +162,29 @@ class CatalogoPeliculasScreen extends StatelessWidget {
                   ],
                 ),
               ),
+              const SizedBox(height: 30),
+
+              // Botón para acceder a Pokemon APIgi
+              Center(
+                child: ElevatedButton.icon(
+                  onPressed: () {
+                    // Navega a la pantalla de la PokéAPI al hacer clic
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PokemonScreen()),
+                    );
+                  },
+                  icon: const Icon(Icons.cloud_download),
+                  label: const Text('Ver HTTP (PokéAPI)'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.deepPurple,
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                    textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20),
             ],
           ),
         ),
