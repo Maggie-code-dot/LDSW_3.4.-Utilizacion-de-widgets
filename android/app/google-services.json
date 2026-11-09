@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "539943846661",
+    "project_id": "catalogo-peliculas-sexto",
+    "storage_bucket": "catalogo-peliculas-sexto.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:539943846661:android:c493e120e0022abc81ad6c",
+        "android_client_info": {
+          "package_name": "com.example.ldsw_utilizacion_de_widgets"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaeoz0H8UegRm7Haai8tu3fuvu8kwAoYI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

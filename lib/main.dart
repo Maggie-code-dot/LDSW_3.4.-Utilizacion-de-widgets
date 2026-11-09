@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
-import 'pokemon_screen.dart'; // <-- 1. Importas tu nueva pantalla de la tarea
+import 'package:firebase_core/firebase_core.dart'; // Para importar firebase_core
+import 'firebase_options.dart';                  // Para importar las opciones generadas
+import 'pokemon_screen.dart'; 
 
-void main() {
+void main() async {                                // Para volver el main asíncrono (async)
+  WidgetsFlutterBinding.ensureInitialized();
+  
+  // Para iniciar Firebase antes de arrancar la app
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(const MyApp());
 }
 
@@ -140,7 +149,7 @@ class CatalogoPeliculasScreen extends StatelessWidget {
               ),
               const SizedBox(height: 10),
 
-              // Carrusel horizontal con 3 películas
+              // Carrusel horizontal 
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -164,11 +173,10 @@ class CatalogoPeliculasScreen extends StatelessWidget {
               ),
               const SizedBox(height: 30),
 
-              // Botón para acceder a Pokemon APIgi
+              // Botón para acceder a Pokemon API
               Center(
                 child: ElevatedButton.icon(
                   onPressed: () {
-                    // Navega a la pantalla de la PokéAPI al hacer clic
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => PokemonScreen()),
